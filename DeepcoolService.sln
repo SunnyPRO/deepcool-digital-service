@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepcoolService", "DeepcoolService\DeepcoolService.csproj", "{A1E19544-22C8-4108-ADE9-739B530B65E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\deepcool.ico = ..\..\..\Downloads\deepcool.ico
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DeepcoolServiceSetup", "DeepcoolServiceSetup\DeepcoolServiceSetup.vdproj", "{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|ARM64.Build.0 = Debug|ARM64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|x64.ActiveCfg = Debug|x64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|x64.Build.0 = Debug|x64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|x86.ActiveCfg = Debug|x86
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Debug|x86.Build.0 = Debug|x86
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|ARM64.ActiveCfg = Release|x64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|ARM64.Build.0 = Release|x64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|x64.ActiveCfg = Release|x64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|x64.Build.0 = Release|x64
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|x86.ActiveCfg = Release|x86
+		{A1E19544-22C8-4108-ADE9-739B530B65E0}.Release|x86.Build.0 = Release|x86
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Debug|Any CPU.ActiveCfg = Debug
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Debug|ARM64.ActiveCfg = Debug
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Debug|x64.ActiveCfg = Debug
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Debug|x86.ActiveCfg = Debug
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Debug|x86.Build.0 = Debug
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Release|Any CPU.ActiveCfg = Release
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Release|ARM64.ActiveCfg = Release
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Release|x64.ActiveCfg = Release
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Release|x86.ActiveCfg = Release
+		{4D2D5BDE-1021-AFE1-E80D-25C862957EB6}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7FD62AF-150D-4575-9781-75E1738174C7}
+	EndGlobalSection
+EndGlobal
