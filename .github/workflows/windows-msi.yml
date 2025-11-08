@@ -1,0 +1,35 @@
+name: windows-msi
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch: {}
+
+jobs:
+  build-msi:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+      - name: Build Service (Release)
+        run: msbuild DeepcoolService.sln /p:Configuration=Release /t:Build
+      - name: Build WiX MSI
+        run: msbuild installer\InstallerWiX\InstallerWiX.wixproj /p:Configuration=Release
+      - name: Sign MSI (optional)
+        if: env.WINDOWS_CERT_PFX_BASE64 != '' && env.WINDOWS_CERT_PASSWORD != ''
+        env:
+          WINDOWS_CERT_PFX_BASE64: ${{ secrets.WINDOWS_CERT_PFX_BASE64 }}
+          WINDOWS_CERT_PASSWORD: ${{ secrets.WINDOWS_CERT_PASSWORD }}
+        run: |
+          echo Sign certificate to PFX
+          echo %WINDOWS_CERT_PFX_BASE64% > cert.b64
+          certutil -decode cert.b64 code-sign.pfx
+          signtool sign /f code-sign.pfx /p %WINDOWS_CERT_PASSWORD% /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 installer\InstallerWiX\bin\Release\DeepcoolServiceInstaller.msi
+          signtool verify /pa installer\InstallerWiX\bin\Release\DeepcoolServiceInstaller.msi
+      - name: Upload MSI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DeepcoolServiceInstaller
+          path: installer\InstallerWiX\bin\Release\DeepcoolServiceInstaller.msi

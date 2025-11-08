@@ -1,5 +1,6 @@
 ﻿using System.ServiceProcess;
 using DeepcoolService.Monitoring;
+using DeepcoolService.Utils;
 
 namespace DeepcoolService
 {
@@ -16,13 +17,30 @@ namespace DeepcoolService
 
         protected override void OnStart(string[] args)
         {
+            Logger.Info("Service starting...");
             worker = new MonitorWorker();
             worker.Start();
+            Logger.Info("MonitorWorker started.");
         }
 
         protected override void OnStop()
         {
-            worker.Stop();
+            Logger.Info("Service stopping...");
+
+            // Request additional time from SCM (Service Control Manager) if needed
+            // This prevents SCM from killing the service prematurely
+            RequestAdditionalTime(5000); // 5 seconds
+
+            try
+            {
+                worker?.Stop();
+            }
+            catch (System.Exception ex)
+            {
+                Logger.Error("Error during worker stop", ex);
+            }
+
+            Logger.Info("Service stopped.");
         }
     }
 }
