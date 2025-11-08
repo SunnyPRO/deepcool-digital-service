@@ -1,0 +1,6 @@
+{
+  "name": "deepcool-digital-service",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "postCreateCommand": "bash .devcontainer/setup-mono.sh"
+}

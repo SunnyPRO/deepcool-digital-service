@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Product Id="*" Name="Deepcool Digital" Language="1033" Version="1.0.0" Manufacturer="naithy" UpgradeCode="961EDCA8-61E6-4677-964B-20B7BA694527">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+    <Media Id="1" Cabinet="product.cab" EmbedCab="yes" />
+    <MajorUpgrade AllowDowngrades="no" DowngradeErrorMessage="A newer version of Deepcool Digital is already installed." />
+    <Feature Id="MainFeature" Title="Deepcool Digital Service" Level="1">
+      <ComponentGroupRef Id="ServiceComponents" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="DeepcoolService" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ServiceComponents">
+      <Component Id="cmpServiceExe" Guid="*">
+        <File Id="DeepcoolExe" Source="$(var.DeepcoolService.TargetPath)" KeyPath="yes" />
+        <ServiceInstall Id="DeepcoolInstall" Name="DeepCool" DisplayName="Deepcool Digital Service" Description="Minimal service to drive Deepcool digital display devices." Type="ownProcess" Start="auto" ErrorControl="normal" Vital="yes" />
+        <ServiceControl Id="StartDeepcool" Name="DeepCool" Start="install" Stop="both" Remove="uninstall" Wait="yes" />
+      </Component>
+      <Component Id="cmpSampleConfig" Guid="*">
+        <File Id="SampleCfg" Source="..\DeepcoolService\DeepcoolDisplay.sample.cfg" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

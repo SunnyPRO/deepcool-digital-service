@@ -33,18 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3BF80EF2460BD1F8B4E8BE0E720ED0E4"
-        "OwnerKey" = "8:_3364720115B445CFB6670C780E31DD9F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3BF80EF2460BD1F8B4E8BE0E720ED0E4"
-        "OwnerKey" = "8:_07ECC3C56246B54877BEA9EA2A107587"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_42AD033F2B3D44BD87A5B854DD9B1775"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -285,37 +273,6 @@
                     }
                 }
             "SourcePath" = "8:System.CodeDom.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8CE682B7F5F841CD8B5BEA0FB7607901"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3BF80EF2460BD1F8B4E8BE0E720ED0E4"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:HidSharp, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_3BF80EF2460BD1F8B4E8BE0E720ED0E4"
-                    {
-                    "Name" = "8:HidSharp.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:HidSharp.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8CE682B7F5F841CD8B5BEA0FB7607901"

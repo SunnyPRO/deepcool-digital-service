@@ -361,3 +361,15 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+# DeepcoolService specific additions
+nuget.exe
+DeepcoolService/DeepcoolDisplay.cfg
+DeepcoolService/DeepcoolDisplay.local.cfg
+DeepcoolService/*.log
+DeepcoolService/logs/
+DeepcoolServiceSetup/**/[Rr]elease/
+DeepcoolServiceSetup/**/[Dd]ebug/
+DeepcoolServiceSetup/**/*.msi
+*.msi
+packet-samples/
+dist/
